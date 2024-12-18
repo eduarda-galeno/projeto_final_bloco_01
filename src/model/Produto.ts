@@ -3,14 +3,14 @@ export abstract class Produto{
     // Atributos
     private _id: number;
     private _nome: string;
-    private _tipo: number;
+    private _categoria: number;
     private _preco: number;
 
     // Método Construtor
-	constructor(id: number, nome: string, tipo: number, preco: number) {
+	constructor(id: number, nome: string, categoria: number, preco: number) {
 		this._id = id;
 		this._nome = nome;
-		this._tipo = tipo;
+		this._categoria = categoria;
 		this._preco = preco;
 	}
 
@@ -24,8 +24,8 @@ export abstract class Produto{
 		return this._nome;
 	}
 
-	public get tipo(): number {
-		return this._tipo;
+	public get categoria(): number {
+		return this._categoria;
 	}
 
 	public get preco(): number {
@@ -40,8 +40,8 @@ export abstract class Produto{
 		this._nome = value;
 	}
 
-	public set tipo(value: number) {
-		this._tipo = value;
+	public set categoria(value: number) {
+		this._categoria = value;
 	}
 
 	public set preco(value: number) {
@@ -50,14 +50,14 @@ export abstract class Produto{
 
     public visualizar(): void {
 
-        let tipo: string = "";
+        let categoria: string = "";
 
-        switch (this._tipo) {
+        switch (this._categoria) {
             case 1:
-                tipo = "Caderno";
+                categoria = "Caderno";
                 break;
             case 2:
-                tipo = "Estojo";
+                categoria = "Estojo";
                 break;
         }
 
@@ -66,7 +66,7 @@ export abstract class Produto{
         console.log("---------------------------------------------------------");
         console.log("Id: " + this._id);
         console.log("Nome: " + this._nome);
-        console.log("Tipo: " + tipo);
+        console.log("Categoria: " + this._categoria);
         console.log("Preço: R$ " + this._preco.toFixed(2));
 
     }

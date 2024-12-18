@@ -6,8 +6,8 @@ export class Caneta extends Produto{
    private _cor: string;
 
 // Método Construtor
-	constructor(id: number, nome: string, tipo: number, preco: number, cor: string) {
-		super(id, nome, tipo, preco);
+	constructor(id: number, nome: string, categoria: number, preco: number, cor: string) {
+		super(id, nome, categoria, preco);
         this._cor = cor;
 	}
 
